@@ -2,12 +2,20 @@
     padding: 0;
     margin: 0%;
     box-sizing: border-box;
+    background-color: rgb(236, 225, 246);
 }
+h1{
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 50px;
+ letter-spacing: 2px;
+ margin-left: 20px;
+ color: purple;
 
+}
 .ticTac {
 
     width: 100%;
-    height: 500PX;
+    height: 90vh;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -19,14 +27,22 @@
 .right {
     width: 45%;
     height: auto;
-    border: 1px solid rgb(126, 109, 126);
+ 
     margin: 20px;
     display: flex;
     justify-content: center;
 
 }
 
-
+button{
+    width:100px;
+    font-size: 30px;
+    margin: 20px;
+border: none;
+background:plum;
+color: white;
+border-radius: 10px;
+}
 .innerTic {
     display: grid;
     grid-template-columns: repeat(3, 120px);
@@ -74,10 +90,72 @@
     display: grid;
     font-size: 12vh;
     place-content: center;
+    color: purple;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
 .right{
     display: flex;
     flex-direction: column;
+}
+
+
+
+@media screen and (max-width:400px) {
+    h1{
+        
+        font-size: 40px;
+        
+        margin: 20px;
+      
+       }
+
+       .ticTac {
+
+        width: 100%;
+        height: auto;
+    
+    }
+    
+    
+
+
+
+    .innerTic {
+        display: grid;
+        grid-template-columns: repeat(3, 70px);
+        grid-template-rows: repeat(3, 70px);
+        gap: 5px;
+        border: 1px solid purple;
+        margin: 10px;
+        padding: 10px;
+        border: none;
+        place-content: center;
+    
+    }
+    .check{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+      font-family: Arial, Helvetica, sans-serif;
+        font-size: 7vh;
+        color: purple;
+    }
+    
+
+    .left,
+    .right {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+        height: auto;
+        
+       
+        display: flex;
+        justify-content: center;
+    
+    }
+    
+
 }
